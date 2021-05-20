@@ -1,4 +1,4 @@
-git clone "url" git init <br> <hr>
+git clone "url" git init  -> PRIMEIRA VEZ FAZENDO COMMIT
 git add * <br>
 git commit -m "msg" <br>
 git status <br>
