@@ -1,0 +1,5 @@
+git clone "url" git init <br> <hr>
+git add * <br>
+git commit -m "msg" <br>
+git status <br>
+git push <br>
