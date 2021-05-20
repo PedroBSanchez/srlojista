@@ -1,0 +1,5 @@
+git clone "url" git init  -> PRIMEIRA VEZ FAZENDO COMMIT
+git add * 
+git commit -m "msg" 
+git status 
+git push 
