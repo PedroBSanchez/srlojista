@@ -63,59 +63,60 @@
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
-                            </div>
+                        </div>
+                        <form onsubmit="cadastrarProduto()">
                             <div class="modal-body">
-                                <form>
-                                    <div class="form-group">
-                                        <label for="inputNomeProduto">Nome:</label>
-                                        <input type="text" class="form-control">
+                                <div class="form-group">
+                                    <label for="inputNomeProduto">Nome:</label>
+                                    <input type="text" id="produtoNome" class="form-control">
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="inputVlCusto">Valor de Custo:</label>
+                                        <input type="number" id="produtoVlCusto" class="form-control" placeholder="R$00,00">
                                     </div>
-                                    <div class="form-row">
-                                        <div class="form-group col-md-6">
-                                            <label for="inputVlCusto">Valor de Custo:</label>
-                                            <input type="number" class="form-control" placeholder="R$00,00">
-                                        </div>
-                                        <div class="from-group col-md-6">
-                                            <label for="inputVlVenda">Valor de Venda:</label>
-                                            <input type="number" class="form-control" placeholder="R$00,00">
-                                        </div>
+                                    <div class="from-group col-md-6">
+                                        <label for="inputVlVenda">Valor de Venda:</label>
+                                        <input type="number" id="produtoVlVenda" class="form-control" placeholder="R$00,00">
                                     </div>
-                                    <div class="form-row">
-                                        <div class="form-group col-md-6">
-                                            <label for="inputQtdeEstoque">Quantidade em Estoque:</label>
-                                            <input type="number" class="form-control" placeholder="0">
-                                        </div>
-                                    </div>                                    
-                                </form>
+                                </div>
+                               <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="inputQtdeEstoque">Quantidade em Estoque:</label>
+                                        <input type="number" id="produtoQtdeEstoque" class="form-control" placeholder="0">
+                                    </div>
+                                </div>                                  
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
-                                <button type="button" class="btn btn-success">Confirmar</button>
+                                <button type="submit" class="btn btn-success">Confirmar</button>
                             </div>
-                        </div>
-                     </div>
+                        </from> 
+                    </div>
                 </div>
             </div>
-           <!--Tabela-->
-            <div class="row justify-content-center pt-4">
-                <div class="col-12">
-                    <table class="table table-dark" id="tabelaProdutos">
+        </div>
+        <!--Tabela-->
+        <div class="row justify-content-center pt-4">
+            <div class="col-12">
+                <table class="table table-dark" id="tabelaProdutos">
                         <thead>
                             <th scope="col">id</th>
                             <th scope="col">Nome</th>
                             <th scope="col">Valor Venda</th>
                             <th scope="col">Valor Custo</th>
                         </thead>
-                    </table>
-                </div>
+                </table>
             </div>
         </div>
+    </div>
         
         
 
 
     
     <script src="js/produtosScripts/produtosGet.js"></script>
+    <script src="js/produtosScripts/produtosPost.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
     
