@@ -1,11 +1,11 @@
-
+/*
 function fazGet() {
     /* Parte que faz a requisição na API (dados recebidos estão sendo simulados até que a API esteja pronta)
     var request = new XMLHttpRequest();
     request.open("GET", url, false);
     request.send();
     return request.responseText;
-    */
+    
     dados = [
         {"id": 1, "nome" : "Teclado", "valorCusto" : 30, "valorVenda" : 60},
         {"id": 2, "nome" : "Fone", "valorCusto" : 30, "valorVenda" : 60},
@@ -41,7 +41,6 @@ function main() {
     produtos = JSON.parse(valores);  
     -> Quando for utilzada a API é necessário este comando, 
     pois os dados recebidos estão em forda de string e não como JSON
-    */
     var tabela = document.getElementById("tabelaProdutos");
     //Para cada produto
         //criar uma linha
@@ -56,3 +55,4 @@ function main() {
 }
 
 main();
+*/

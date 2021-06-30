@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produtos</title>
+    <title>Pedidos</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     
 
@@ -13,8 +13,8 @@
     
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">
-                <img src="img/nav_logo.png" width="30" height="24" class="d-inline-block align-text-top">
+            <a class="navbar-brand" href="../prototipoDeTela/index.html">
+                <img src="../img/nav_logo.png" width="30" height="24" class="d-inline-block align-text-top">
                 Sr.lojista
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -23,13 +23,13 @@
             <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                <a class="nav-link" href="#">Clientes</a>
-                </li>
-                <li class="nav-item active">
-                <a class="nav-link" href="#">Produtos</a>
+                <a class="nav-link" href="../prototipoDeTela/clientes.html">Clientes</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="#">Pedidos</a>
+                <a class="nav-link" href="../prototipoDeTela/produtos.html">Produtos</a>
+                </li>
+                <li class="nav-item active">
+                <a class="nav-link" href="../prototipoDeTela/pedidos.html">Pedidos</a>
                 </li>
             </ul>
             </div>
@@ -39,7 +39,7 @@
     <div class="container">
         <div class="row mt-4">
             <div class="col-12">
-                <h3>Produtos</h3>
+                <h3>Pedidos</h3>
             </div>
         </div>
         <hr>
@@ -49,7 +49,7 @@
                 
             </div>
             <div class="col-4">
-                <a href=""> <img src="img/lupa.png" width="30" height="24" class="mt-1"></a>
+                <a href=""> <img src="../img/lupa.png" width="30" height="24" class="mt-1"></a>
             </div>
             <div class="col-4 text-right">
                 <button type="button" class="btn btn-outline-dark" data-toggle="modal" data-target="#staticBackdrop">Cadastrar</button>
@@ -59,7 +59,7 @@
                 <div class="modal-dialog modal-lg">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="staticBackdropLabel">Cadastro de Produto</h5>
+                            <h5 class="modal-title" id="staticBackdropLabel">Cadastro de Pedidos</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
@@ -67,25 +67,19 @@
                         <form onsubmit="cadastrarProduto()">
                             <div class="modal-body">
                                 <div class="form-group">
-                                    <label for="inputNomeProduto">Nome:</label>
-                                    <input type="text" id="produtoNome" class="form-control">
+                                    <label for="inputNomeProduto">Cliente</label>
+                                    <input type="text" class="form-control">
                                 </div>
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
-                                        <label for="inputVlCusto">Valor de Custo:</label>
-                                        <input type="number" id="produtoVlCusto" class="form-control" placeholder="R$00,00">
+                                        <label for="inputVlCusto">Valor Total:</label>
+                                        <input type="number" class="form-control" placeholder="R$00,00">
                                     </div>
                                     <div class="from-group col-md-6">
-                                        <label for="inputVlVenda">Valor de Venda:</label>
-                                        <input type="number" id="produtoVlVenda" class="form-control" placeholder="R$00,00">
+                                        <label for="inputVlVenda">Data:</label>
+                                        <input type="text" class="form-control" placeholder="d/m/Y">
                                     </div>
-                                </div>
-                               <div class="form-row">
-                                    <div class="form-group col-md-6">
-                                        <label for="inputQtdeEstoque">Quantidade em Estoque:</label>
-                                        <input type="number" id="produtoQtdeEstoque" class="form-control" placeholder="0">
-                                    </div>
-                                </div>                                  
+                                </div>                                
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
@@ -102,19 +96,45 @@
                 <table class="table table-dark" id="tabelaProdutos">
                         <thead>
                             <th scope="col">id</th>
-                            <th scope="col">Nome</th>
-                            <th scope="col">Valor Venda</th>
-                            <th scope="col">Valor Custo</th>
+                            <th scope="col">Cliente</th>
+                            <th scope="col">Valor Total</th>
+                            <th scope="col">Data</th>
                         </thead>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Lucas Francisco Sanchez</td>
+                            <td>R$700,00</td>
+                            <td>25/06/2021</td> 
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Lucas Francisco Sanchez</td>
+                            <td>R$90,00</td>
+                            <td>21/05/2021</td> 
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Gabriela Ferreira</td>
+                            <td>R$790,00</td>
+                            <td>02/04/2021</td> 
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>Matheus Rodrigues</td>
+                            <td>R$40,00</td>
+                            <td>27/02/2021</td> 
+                        </tr>
+                        <tr>
+                            <th scope="row">5</th>
+                            <td>Gustavo Pereira</td>
+                            <td>R$100,00</td>
+                            <td>14/01/2021</td> 
+                        </tr>
                 </table>
             </div>
         </div>
     </div>
         
-        
-
-
-    
     <script src="js/produtosScripts/produtosGet.js"></script>
     <script src="js/produtosScripts/produtosPost.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

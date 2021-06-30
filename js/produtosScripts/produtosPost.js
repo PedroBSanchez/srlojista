@@ -28,7 +28,7 @@ function cadastrarProduto(){
 
     console.log(body);
 
-    //fazPost(url, body) "Utilizada quando api estiver pronta"
+    //fazPost(url, body) "Será utilizada quando api estiver pronta"
 
 
 
